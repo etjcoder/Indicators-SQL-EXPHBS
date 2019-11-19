@@ -21,7 +21,7 @@ module.exports = function(app) {
         }).then(function(dbProtege) {
             // console.log(dbProtege)
             console.log(dbProtege.dataValues)
-            res.render("index", dbProtege.dataValues)
+            res.render("protege", dbProtege.dataValues)
         })
     })
 

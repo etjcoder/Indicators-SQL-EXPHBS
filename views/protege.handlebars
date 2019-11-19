@@ -2,70 +2,101 @@
 
     <div class="jumbotron" style="text-align: center;">
         <h2><strong>Indicators App</strong></h2>
-        <h4><u>Mentor View</u></h4>
+        <h4><u>Protege View</u></h4>
     </div>
 
 
     <div class="row">
         <div class="col-lg-8">
-
-            <div class="card text-center" style="">
-                <div class="card-header">
-                    <h4>Indicator Options</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="card text-center" style="">
+                        <div class="card-header">
+                            <h4>Indicator Options</h4>
+                        </div>
+                        <div class="card-body">
+                            {{!-- <h5 class="card-title">Special title treatment</h5> --}}
+                            {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Prospect Dials:</h5>
+                                    <button class="btn btn-outline-dark" value={{cashflow_prospect_dials}}
+                                        id="cashflow-prospect-dial">Cash-Flow</button>
+                                    <button class="btn btn-outline-dark" value={{businessowner_prospect_dials}}
+                                        id="businessowner-prospect-dial">Business</button>
+                                </div>
+                                <hr>
+                                <div class="col">
+                                    <h5>Existing Client Dials:</h5>
+                                    <button class="btn btn-outline-dark" value={{cashflow_client_dials}}
+                                        id="cashflow-client-dial">
+                                        Cash-Flow</button>
+                                    <button class="btn btn-outline-dark" value={{businessowner_client_dials}}
+                                        id="businessowner-client-dial">Business</button>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Contacts:</h5>
+                                    <button class="btn btn-outline-primary" value={{prospect_contacts}}
+                                        id="prospect-contact">Prospect</button>
+                                    <button class="btn btn-outline-primary" value={{client_contacts}}
+                                        id="client-contact">Client</button>
+                                </div>
+                                <div class="col">
+                                    <h5>Appointments:</h5>
+                                    <button class="btn btn-outline-success" value={{new_appointments}}
+                                        id="new-prospect-appointment">New Appt</button>
+                                    <button class="btn btn-outline-success" value={{prospect_appointments}}
+                                        id="prospect-appointment">Prospect</button>
+                                    <button class="btn btn-outline-success" value={{client_appointments}}
+                                        id="client-appointment">Client</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Notes:</h5>
+                                    <form id="create-note">
+                                        <label for="note">Make a Note:</label>
+                                        <input type="text" id="note-input">
+                                        <button type="submit" class="btn btn-outline-dark">Create Note</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted">
+                            ECE
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    {{!-- <h5 class="card-title">Special title treatment</h5> --}}
-                    {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
-                    <div class="row">
-                        <div class="col">
-                            <h5>Prospect Dials:</h5>
-                            <button class="btn btn-outline-dark" value={{cashflow_prospect_dials}}
-                                id="cashflow-prospect-dial">Cash-Flow</button>
-                            <button class="btn btn-outline-dark" value={{businessowner_prospect_dials}}
-                                id="businessowner-prospect-dial">Business</button>
-                        </div>
-                        <hr>
-                        <div class="col">
-                            <h5>Existing Client Dials:</h5>
-                            <button class="btn btn-outline-dark" value={{cashflow_client_dials}} id="cashflow-client-dial">
-                                Cash-Flow</button>
-                            <button class="btn btn-outline-dark" value={{businessowner_client_dials}}
-                                id="businessowner-client-dial">Business</button>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <h5>Contacts:</h5>
-                            <button class="btn btn-outline-primary" value={{prospect_contacts}}
-                                id="prospect-contact">Prospect</button>
-                            <button class="btn btn-outline-primary" value={{client_contacts}}
-                                id="client-contact">Client</button>
-                        </div>
-                        <div class="col">
-                            <h5>Appointments:</h5>
-                            <button class="btn btn-outline-success" value={{new_appointments}}
-                                id="new-prospect-appointment">New Appt</button>
-                            <button class="btn btn-outline-success" value={{prospect_appointments}}
-                                id="prospect-appointment">Prospect</button>
-                            <button class="btn btn-outline-success" value={{client_appointments}}
-                                id="client-appointment">Client</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h5>Notes:</h5>
-                            <form id="create-note">
-                                <label for="note">Make a Note:</label>
-                                <input type="text" id="note-input">
-                                <button type="submit" class="btn btn-outline-dark">Create Note</button>
-                            </form>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-title"></div>
+                        <div class="card-body">
+                            <canvas id="myChart" width="200" height="200"></canvas>
                         </div>
                     </div>
                 </div>
-                <div class="card-footer text-muted">
-                    ECE
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-title"></div>
+                        <div class="card-body">
+                            <canvas id="myChart2" width="200" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="myRadar" width="200" height="200"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,25 +118,24 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col">Prospect Dials: <br><span id="prospect-dials"
+                                {{!-- <div class="col">Prospect Dials: <br><span id="prospect-dials"
                                         value={{prospect_dials}}>{{prospect_dials}}</span></div>
                                 <div class="col">Client Dials: <br><span id="client-dials"
-                                        value={{client_dials}}>{{client_dials}}</span></div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col"><strong>Contacts: <br><br><span id="contacts"
-                                            value={{contacts}}>{{contacts}}</span></strong>
+                                        value={{client_dials}}>{{client_dials}}</span></div> --}}
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-title"></div>
+                                        <div class="card-body">
+                                            <canvas id="dialsDoughnut" width="200" height="200"></canvas>
+                                        </div>
+                                    </div>
+
                                 </div>
+
+
                             </div>
                             <hr>
-                            <div class="row">
-                                <div class="col">Prospect Contacts: <br><span id="prospect-contacts"
-                                        value="">{{prospect_contacts}}</span></strong></div>
-                                <div class="col">Client Contacts <br><span id="client-contact"
-                                        value="">{{client_contacts}}</span></div>
-                            </div>
-                            <hr>
+
                             <div class="row">
                                 <div class="col"><strong>Appointments: <br><span id="appointments"
                                             value={{scheduled_appointments}}>{{scheduled_appointments}}</span></strong>
@@ -113,49 +143,78 @@
                             </div>
                             <hr>
                             <div class="row">
-                                <div class="col">New Appts.: <br><span id="new-appts"
-                                        value="">{{new_appointments}}</span></div>
-                                <div class="col">Prospect Appts.: <br><span id="new-appts"
-                                        value="">{{prospect_appointments}}</span></div>
-                                <div class="col">Client Appts.: <br><span id="new-appts"
-                                        value="">{{client_appointments}}</span></div>
+                                {{!-- <div class="col">New Appts.: <br><span id="new-appts"
+                                            value="">{{new_appointments}}</span></div>
+                                    <div class="col">Prospect Appts.: <br><span id="new-appts"
+                                            value="">{{prospect_appointments}}</span></div>
+                                    <div class="col">Client Appts.: <br><span id="new-appts"
+                                            value="">{{client_appointments}}</span></div> --}}
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-title"></div>
+                                        <div class="card-body">
+                                            <canvas id="apptDoughnut" width="200" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col"><strong>Contacts:<br><span id="contacts"
+                                            value={{contacts}}>{{contacts}}</span></strong>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                {{!-- <div class="col">Prospect Contacts: <br><span id="prospect-contacts"
+                                        value="">{{prospect_contacts}}</span></strong></div>
+                                <div class="col">Client Contacts <br><span id="client-contact"
+                                        value="">{{client_contacts}}</span></div> --}}
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-title"></div>
+                                        <div class="card-body">
+                                            <canvas id="contactsDoughnut" width="200" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                {{!-- <div class="row">
+                    <div class="col">
+                        <div class="card" style="">
+                            <div class="card-header text-center">
+                                <h5> To-Do's</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6>To-Do items</h6>
+                                <ul>
+                                    <li>Item #1</li>
+                                    <li>Item #2</li>
+                                    <li>Item #3</li>
+                                </ul>
                             </div>
                         </div>
-
                     </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <div class="card" style="">
-                        <div class="card-header text-center">
-                            <h5> To-Do's</h5>
-                        </div>
-                        <div class="card-body">
-                            <h6>To-Do items</h6>
-                            <ul>
-                                <li>Item #1</li>
-                                <li>Item #2</li>
-                                <li>Item #3</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>

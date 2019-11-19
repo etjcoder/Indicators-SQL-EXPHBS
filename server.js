@@ -4,6 +4,7 @@ var exphbs = require("express-handlebars");
 var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
+var Chart = require('chart.js');
 
 var mysql = require("mysql");
 var session = require("express-session");
@@ -52,7 +53,7 @@ app.get('/logout', (req, res) => {
 
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync({force: false}).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",

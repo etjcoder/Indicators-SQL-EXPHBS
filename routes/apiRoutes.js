@@ -57,4 +57,35 @@ module.exports = function(app) {
         })
     })
 
+    app.put("/api/protege/pcontacts/:id", function(req, res) {
+
+        db.protege.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbProtege) {
+            res.json(dbProtege)
+        })
+    })
+
+    app.put("/api/protege/ccontacts/:id", function(req, res) {
+        db.protege.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbProtege) {
+            res.json(dbProtege)
+        })
+    })
+
+    app.put("/api/protege/newappts/:id", function(req, res) {
+        db.protege.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbProtege) {
+            res.json(dbProtege)
+        })
+    })
+
 }

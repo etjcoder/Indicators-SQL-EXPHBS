@@ -1,0 +1,61 @@
+body {
+    background: url("/images/brown-paper-clips-1097930.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0.03265056022408963) 100%); */
+
+    font-family: 'Share Tech', sans-serif;
+}
+
+
+#header {
+    margin-top: 50px;
+    padding: 50px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+/* 
+.videoBgWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    height: 100%
+}
+
+.videoBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .videoBg{
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .videoBg {
+      width: auto;
+      height: 100%;
+    }
+  } */
+
+  /* .card{
+    background-color: rgba(100,100,100, 0.9) !important;
+    color: white
+  } */
+
+  canvas {
+      color: white;
+  }

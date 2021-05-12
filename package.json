@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Evanjcleary/Project2-Runthrough#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
